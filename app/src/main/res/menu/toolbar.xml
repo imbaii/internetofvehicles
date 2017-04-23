@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/standard_map"
+            android:title="标准地图"
+            android:checkable="true"
+            android:checked="true"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/satellite_map"
+            android:title="卫星地图"
+            android:checkable="true"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/night_map"
+            android:title="夜景地图"
+            android:checkable="true"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/navigation_map"
+            android:title="导航地图"
+            android:checkable="true"
+            app:showAsAction="never" />
+
+    </group>
+
+</menu>
