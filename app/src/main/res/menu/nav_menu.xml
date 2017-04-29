@@ -9,12 +9,12 @@
     <item
         android:id="@+id/vehicle_handle"
         android:icon="@drawable/icon"
-        android:title="车辆操纵" />
+        android:title="车辆控制" />
 
     <item
         android:id="@+id/navigation"
         android:icon="@drawable/icon"
-        android:title="行驶导航" />
+        android:title="地图导航" />
 
     <item
         android:id="@+id/safety_effect"

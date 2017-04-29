@@ -1,6 +1,7 @@
 package com.example.internetofvehicles;
 
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -36,19 +37,26 @@ public class NavigationActivity extends AppCompatActivity implements View.OnClic
 
     private MenuItem mNavigationMap;
 
+    private Toolbar navigationToolbar;
+
     private boolean isTrafficMap = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.navigation_activity);
+        setContentView(R.layout.activity_navigation);
         mMapView = (MapView) findViewById(R.id.map);
         mMapView.onCreate(savedInstanceState);
-        aMap = mMapView.getMap();
-
         mFab = (FloatingActionButton) findViewById(R.id.fab);
-        Toolbar mainToolbar = (Toolbar) findViewById(R.id.main_toolbar);
-        setSupportActionBar(mainToolbar);
+        navigationToolbar = (Toolbar) findViewById(R.id.navigation_toolbar);
+        aMap = mMapView.getMap();
+        navigationToolbar.setTitle("");
+        setSupportActionBar(navigationToolbar);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.back);
+        }
         mFab.setOnClickListener(this);
         mapInit();
     }
@@ -82,6 +90,9 @@ public class NavigationActivity extends AppCompatActivity implements View.OnClic
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                break;
             case R.id.standard_map:
                 aMap.setMapType(AMap.MAP_TYPE_NORMAL);
                 mStandardMap.setChecked(true);

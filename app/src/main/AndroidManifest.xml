@@ -26,8 +26,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".DynamicParameterActivity" />
-        <activity android:name=".VehicleHandleActivity" />
+        <activity android:name=".CarParaActivity" />
+        <activity android:name=".CarControlActivity" />
         <activity android:name=".NavigationActivity" />
         <activity android:name=".SafetyEffectActivity" />
     </application>

@@ -11,7 +11,16 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        app:popupTheme="@style/AppToolbarPopupTheme">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:text="车联网安全" />
+
+    </android.support.v7.widget.Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,7 +39,7 @@
             android:focusableInTouchMode="true" />
 
         <EditText
-            android:id="@+id/account"
+            android:id="@+id/username_edit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -56,7 +65,7 @@
             android:focusableInTouchMode="true" />
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/password_edit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -88,7 +97,7 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/registration"
+            android:id="@+id/registration_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -96,7 +105,7 @@
             android:textSize="20sp" />
         
         <Button
-            android:id="@+id/login"
+            android:id="@+id/login_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
